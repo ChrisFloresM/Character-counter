@@ -1,0 +1,113 @@
+:root {
+    /* ==================== Colors ==================== */
+    --neutral-900: #12141A;
+    --neutral-800: #1D2127;
+    --neutral-700: #2A2E37;
+    --neutral-600: #404554;
+    --neutral-200: #E4E4E7;
+    --neutral-100: #F2F2F7;
+    --neutral-0: #FFFFFF;
+
+    /* === COLORES PURPURA === */
+    --purple-400: #D4A7FA;
+    --purple-500: #C27CF9;
+
+    /* === COLORES AZUL === */
+    --blue-400: #7DA6FA;
+    --blue-500: #C27CF9;
+
+    /* === COLORES AMARILLO === */
+    --yellow-500: #FFB900;
+
+    /* === COLORES NARANJA === */
+    --orange-500: #FF8158;
+    --orange-800: #D63301;
+
+    /* ==================== typography ==================== */
+    --font-family-primary: 'DM Sans', sans-serif;
+
+    /* Tamaños de fuente */
+    --font-size-64: 64px;
+    --font-size-40: 40px;
+    --font-size-24: 24px;
+    --font-size-20: 20px;
+    --font-size-16: 16px;
+
+    /* Pesos de fuente */
+    --font-weight-bold: bold;
+    --font-weight-regular: normal;
+    --font-weight-semibold: 600;
+
+    /* Altura de línea */
+    --line-height-100: 100%;
+    --line-height-130: 130%;
+    --line-height-140: 140%;
+
+    /* Espaciado de letras */
+    --letter-spacing-none: 0px;
+    --letter-spacing-tight: -0.6px;
+    --letter-spacing-normal: -1px;
+
+    /* ==================== Spacing ==================== */
+    --spacing-0: 0px;
+    --spacing-025: 2px;
+    --spacing-050: 4px;
+    --spacing-075: 6px;
+    --spacing-100: 8px;
+    --spacing-150: 12px;
+    --spacing-200: 16px;
+    --spacing-250: 20px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-800: 64px;
+    --spacing-1000: 80px;
+
+    /* ==================== Radius ==================== */
+    --radius-0: 0;
+    --radius-4: 4px;
+    --radius-6: 6px;
+    --radius-8: 8px;
+    --radius-10: 10px;
+    --radius-12: 12px;
+    --radius-16: 16px;
+    --radius-20: 20px;
+    --radius-24: 24px;
+    --radius-full: 999px;
+}
+
+/* ==================== preset classes for text ==================== */
+.text-1 {
+    font-size: var(--font-size-40);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-100);
+    letter-spacing: var(--letter-spacing-normal);
+
+    @media (width >= 700px) {
+        font-size: var(--font-size-64);
+    }
+}
+
+.text-2 {
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-130);
+    letter-spacing: var(--letter-spacing-normal);
+}
+
+.text-3 {
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-140);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.text-4 {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-130);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+
