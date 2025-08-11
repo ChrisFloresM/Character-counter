@@ -1,1 +1,32 @@
 
+/* Header styles */
+.app-header {
+    padding: var(--spacing-200);
+    display: flex;
+}
+
+.app-header__logo {
+    width: 184px;
+    height: 30px;
+    margin-right: auto;
+}
+
+.app-header__theme-button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: var(--box-background);
+    border-radius: var(--radius-6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    :hover {
+        cursor: pointer;
+    }
+}
+
+.app-header__theme-icon {
+    width: 20px;
+    height: 20px;
+}

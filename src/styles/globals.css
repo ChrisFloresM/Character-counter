@@ -77,6 +77,21 @@
     --radius-full: 999px;
 }
 
+/*==================== Theming ====================*/
+[data-theme='light'] {
+    --body-background: url('../assets/bg-light-theme.png');
+    --primary-color: var(--neutral-900);
+    --secondary-color: var(--neutral-600);
+    --box-background: var(--neutral-100);
+}
+
+[data-theme='dark'] {
+    --body-background: url('../assets/bg-dark-theme.png');
+    --primary-color: var(--neutral-100);
+    --secondary-color: var(--neutral-200);
+    --box-background: var(--neutral-700);
+}
+
 /* ==================== preset classes for text ==================== */
 .text-1 {
     font-size: var(--font-size-40);
@@ -110,4 +125,18 @@
     letter-spacing: var(--letter-spacing-tight);
 }
 
+/* ==================== other global styles ==================== */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    background: var(--body-background);
+}
+
+.app-container {
+    width: clamp(37.5rem, 100%, 99rem);
+    margin: 0 auto;
+}
 
