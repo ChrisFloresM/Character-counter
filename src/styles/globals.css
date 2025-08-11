@@ -10,14 +10,15 @@
 
     /* === COLORES PURPURA === */
     --purple-400: #D4A7FA;
-    --purple-500: #C27CF9;
+    --purple-500: rgb(194, 124, 249);
+    --purple-500-shadow: rgba(194, 124, 249, 0.25);
 
     /* === COLORES AZUL === */
     --blue-400: #7DA6FA;
     --blue-500: #C27CF9;
 
     /* === COLORES AMARILLO === */
-    --yellow-500: #FFB900;
+    --yellow-500: #FF9F00;
 
     /* === COLORES NARANJA === */
     --orange-500: #FF8158;
@@ -125,6 +126,10 @@
     letter-spacing: var(--letter-spacing-tight);
 }
 
+.color-primary {
+    color: var(--primary-color);
+}
+
 /* ==================== other global styles ==================== */
 html {
     font-size: 62.5%;
@@ -132,6 +137,8 @@ html {
 
 body {
     width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--secondary-color);
     background: var(--body-background);
 }
 

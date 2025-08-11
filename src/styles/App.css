@@ -3,6 +3,7 @@
 .app-header {
     padding: var(--spacing-200);
     display: flex;
+    margin-bottom: var(--spacing-500);
 }
 
 .app-header__logo {
@@ -29,4 +30,161 @@
 .app-header__theme-icon {
     width: 20px;
     height: 20px;
+}
+
+/* main */
+.mainApp {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-500);
+}
+
+.mainApp__heading {
+    text-align: center;
+}
+
+/* user inputs */
+.userInputs {
+    padding: 0 var(--spacing-200);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+}
+
+.userInputs__text {
+    height: 20rem;
+    border-radius: var(--radius-12);
+    border: none;
+    padding: var(--spacing-200);
+    color: inherit;
+    background-color: var(--neutral-800);
+    box-shadow: inset 0 0 0 2px var(--neutral-700);
+    overflow: scroll;
+    resize: none;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: var(--neutral-600);
+        }
+    }
+
+    &:focus {
+        outline: 2px solid var(--purple-500);
+        box-shadow: 0 0 8px 8px var(--purple-500-shadow);
+    }
+}
+
+.userInputs__features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-150);
+}
+
+.userInputs__checkbox-label {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.userInput__custon-checkbox {
+    margin-right: 1rem;
+    width: 16px;
+    height: 16px;
+    border-radius: var(--radius-4);
+    border: 1px solid var(--secondary-color);
+}
+
+input[type="checkbox"]:checked + .userInput__custon-checkbox {
+    background: var(--purple-500) url("../assets/icon-check.svg") no-repeat center;
+    border: none;
+}
+
+/* Results */
+.results {
+    padding: 0 var(--spacing-200);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
+.results__cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+}
+
+.result-card {
+    width: 100%;
+    padding: 2rem;
+    border-radius: var(--radius-12);
+    color: var(--neutral-900);
+}
+
+.result-card__number {
+    margin-bottom: var(--spacing-100);
+}
+
+.result-card.total-characters {
+    background: var(--purple-500) url("../assets/pattern-character-count.svg") no-repeat calc(100% + 50px);
+}
+
+.result-card.word-count {
+    background: var(--yellow-500) url("../assets/pattern-word-count.svg") no-repeat calc(100% + 50px);
+}
+
+.result-card.sentence-count {
+    background: var(--orange-500) url("../assets/pattern-sentence-count.svg") no-repeat calc(100% + 50px);
+}
+
+.results__stats {
+    margin-bottom: var(--spacing-400);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+}
+
+.stats-box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-200);
+}
+
+.letter-stat {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.4rem;
+}
+
+.letter-stat__percentage-bar {
+    height: 1.2rem;
+    border-radius: var(--radius-full);
+    flex: 1;
+    background-color: var(--neutral-800);
+}
+
+.letter-stat__percentage {
+    width: 40%;
+    height: 100%;
+    border-radius: var(--radius-full);
+    background-color: var(--purple-500);
+}
+
+.letter-stat__number {
+    text-align: end;
+}
+
+.result__stats-see-more-btn {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: inherit;
 }
