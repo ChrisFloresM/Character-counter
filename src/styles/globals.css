@@ -23,6 +23,7 @@
     /* === COLORES NARANJA === */
     --orange-500: #FF8158;
     --orange-800: #D63301;
+    --orange-800-shadow: rgba(214, 51, 1, 0.25);
 
     /* ==================== typography ==================== */
     --font-family-primary: 'DM Sans', sans-serif;
@@ -84,13 +85,17 @@
     --primary-color: var(--neutral-900);
     --secondary-color: var(--neutral-600);
     --box-background: var(--neutral-100);
+    --box-inset-shadow: var(--neutral-200);
+    --box-hover: var(--neutral-200);
 }
 
 [data-theme='dark'] {
     --body-background: url('../assets/bg-dark-theme.png');
     --primary-color: var(--neutral-100);
     --secondary-color: var(--neutral-200);
-    --box-background: var(--neutral-700);
+    --box-background: var(--neutral-800);
+    --box-inset-shadow: var(--neutral-700);
+    --box-hover: var(--neutral-600);
 }
 
 /* ==================== preset classes for text ==================== */
@@ -100,7 +105,7 @@
     line-height: var(--line-height-100);
     letter-spacing: var(--letter-spacing-normal);
 
-    @media (width >= 700px) {
+    @media (width >= 768px) {
         font-size: var(--font-size-64);
     }
 }
