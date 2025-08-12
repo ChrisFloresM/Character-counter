@@ -1,13 +1,13 @@
 import {useEffect, useState} from "react";
 
 const logoSrc = {
-	dark: "/src/assets/logo-dark-theme.svg",
-	light: "/src/assets/logo-light-theme.svg",
+	dark: "../src/assets/logo-dark-theme.svg",
+	light: "../src/assets/logo-light-theme.svg",
 }
 
 const iconSrc = {
-	dark: "/src/assets/icon-sun.svg",
-	light: "/src/assets/icon-moon.svg",
+	dark: "../src/assets/icon-sun.svg",
+	light: "../src/assets/icon-moon.svg",
 }
 
 export default function Header() {
