@@ -221,24 +221,25 @@ input[type="checkbox"]:checked + .userInput__custon-checkbox {
 
 .letter-stat {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 2rem 1fr 8rem;
     gap: 1.4rem;
 }
 
 .letter-stat__percentage-bar {
     height: 1.2rem;
     border-radius: var(--radius-full);
-    flex: 1;
     background-color: var(--box-background);
 }
 
 .letter-stat__percentage {
-    width: 40%;
     height: 100%;
     border-radius: var(--radius-full);
     background-color: var(--purple-500);
+}
+
+.letter-stat__letter {
+    text-align: center;
 }
 
 .letter-stat__number {
