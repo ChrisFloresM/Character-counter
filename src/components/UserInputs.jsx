@@ -1,42 +1,39 @@
-const wpmAverage = 250;
-export default function UserInputs(
-	{ inputVal,
-		onChange,
-		excludeSpaces,
-		onExclude,
-		isLimit,
-		onLimit,
-		maxChars,
-		onMaxChars,
-	}) {
-
-	const charLimitExceeded = isLimit && inputVal.length > maxChars;
-	const readingTime = Math.floor(inputVal.length / 250);
-
+export default function UserInputs({ children }) {
 	return (
 		<section className="userInputs">
-			<textarea className={`userInputs__text text-3 ${charLimitExceeded && "limitExceeded"}`} placeholder="Start typing here...(or paste your text)" value={inputVal} onChange={onChange}></textarea>
+			{ children }
+		</section>
+	);
+}
+
+export function UserInputText({ inputVal, onChange, isLimit, maxChars }) {
+	const charLimitExceeded = isLimit && inputVal.length > maxChars;
+	return (
+		<>
+			<textarea
+				className={`userInputs__text text-3 ${charLimitExceeded && "limitExceeded"}`}
+				placeholder="Start typing here...(or paste your text)" value={inputVal} onChange={onChange}>
+			</textarea>
+			<ErrorMessage charLimExc={charLimitExceeded} maxChars={maxChars}/>
+		</>
+	)
+}
+
+function ErrorMessage({ charLimExc, maxChars }) {
+	return (
+		<>
 			{
-				charLimitExceeded &&
+				charLimExc &&
 				<p className="text-4 userInpus__errorMessage">
 					<i className="fa-solid fa-circle-info icon"></i>
 					Limit reached! Your text exceeds {maxChars} characters
 				</p>
 			}
-			<div className="userInputs__features">
-				<div className="checkboxes">
-					<CheckboxFeature value={excludeSpaces} onChange={onExclude}>Exclude spaces</CheckboxFeature>
-					<CheckboxFeature value={isLimit} onChange={onLimit}>Set Character Limit</CheckboxFeature>
-					{isLimit &&
-						<input type="number" className="text-4 userInputs__maxVal" value={maxChars} onChange={onMaxChars}/>}
-				</div>
-				<p className="text-4">Approx.reading time: {"<"}{readingTime} minute</p>
-			</div>
-		</section>
-	)
+		</>
+	);
 }
 
-function CheckboxFeature({children, value, onChange}) {
+export function CheckboxFeature({children, value, onChange}) {
 	return (
 		<label className="userInputs__checkbox-label">
 			<input type="checkbox" value={value} onChange={onChange}/>
@@ -44,4 +41,24 @@ function CheckboxFeature({children, value, onChange}) {
 			<span className="text-4">{children}</span>
 		</label>
 	);
+}
+
+export function FeatureInputs({ children }) {
+	return (
+		<div className="userInputs__features">
+			<div className="checkboxes">
+				{ children }
+			</div>
+			<p className="text-4">Approx.reading time: {"<"}{2} minute</p>
+		</div>
+	)
+}
+
+export function InputCharLimit({ isLimit, maxChars, onMaxChars }) {
+	return (
+		<>
+			{isLimit &&
+				<input type="number" className="text-4 userInputs__maxVal" value={maxChars} onChange={onMaxChars}/>}
+		</>
+	)
 }

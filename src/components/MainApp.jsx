@@ -1,4 +1,5 @@
-import UserInputs from "./UserInputs.jsx";
+import UserInputs, {FeatureInputs} from "./UserInputs.jsx";
+import { UserInputText, CheckboxFeature, InputCharLimit } from "./UserInputs.jsx";
 import Results from "./Results.jsx";
 import {useState} from "react";
 
@@ -28,16 +29,14 @@ export default function MainApp() {
 	return (
 		<main className="mainApp">
 			<h1 className="text-1 color-primary mainApp__heading">Analyze your text in real-time.</h1>
-			<UserInputs
-				inputVal={userInput}
-				onChange={handleChange}
-				excludeSpaces={excludeSpaces}
-				onExclude={handleExcludeSpaces}
-				isLimit={isLimit}
-				onLimit={handleIsLimit}
-				maxChars={maxChars}
-				onMaxChars={handleMaxChars}
-			/>
+			<UserInputs>
+				<UserInputText inputVal={userInput} onChange={handleChange} isLimit={isLimit} maxChars={maxChars} />
+				<FeatureInputs>
+					<CheckboxFeature value={excludeSpaces} onChange={handleExcludeSpaces}>Exclude spaces</CheckboxFeature>
+					<CheckboxFeature value={isLimit} onChange={handleIsLimit}>Set Character Limit</CheckboxFeature>
+					<InputCharLimit isLimit={isLimit} maxChars={maxChars} onMaxChars={handleMaxChars} />
+				</FeatureInputs>
+			</UserInputs>
 			<Results inputVal={userInput} excludeSpaces={excludeSpaces}/>
 		</main>
 	);
