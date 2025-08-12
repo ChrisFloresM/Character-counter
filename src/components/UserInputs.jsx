@@ -6,8 +6,8 @@ export default function UserInputs({ children }) {
 	);
 }
 
-export function UserInputText({ inputVal, onChange, isLimit, maxChars }) {
-	const charLimitExceeded = isLimit && inputVal.length > maxChars;
+export function UserInputText({ inputVal, onChange, isLimit, totalChars, maxChars }) {
+	const charLimitExceeded = isLimit && totalChars > maxChars;
 	return (
 		<>
 			<textarea
