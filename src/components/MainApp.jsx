@@ -33,8 +33,8 @@ export default function MainApp() {
 			<UserInputs>
 				<UserInputText inputVal={userInput} onChange={handleChange} isLimit={isLimit} totalChars={totalChars} maxChars={maxChars} />
 				<FeatureInputs totalChars={userInput}>
-					<CheckboxFeature value={excludeSpaces} onChange={handleExcludeSpaces}>Exclude spaces</CheckboxFeature>
-					<CheckboxFeature value={isLimit} onChange={handleIsLimit}>Set Character Limit</CheckboxFeature>
+					<CheckboxFeature id="check-exclude-spaces" value={excludeSpaces} onChange={handleExcludeSpaces}>Exclude spaces</CheckboxFeature>
+					<CheckboxFeature id="check-character-limit" value={isLimit} onChange={handleIsLimit}>Set Character Limit</CheckboxFeature>
 					<InputCharLimit isLimit={isLimit} maxChars={maxChars} onMaxChars={handleMaxChars} />
 				</FeatureInputs>
 			</UserInputs>

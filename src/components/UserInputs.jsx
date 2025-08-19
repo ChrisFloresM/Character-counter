@@ -10,7 +10,9 @@ export function UserInputText({ inputVal, onChange, isLimit, totalChars, maxChar
 	const charLimitExceeded = isLimit && totalChars > maxChars;
 	return (
 		<>
+			<label htmlFor="user-input-text" className="sr-only">Input your text here:</label>
 			<textarea
+				id="user-input-text"
 				className={`userInputs__text text-3 ${charLimitExceeded && "limitExceeded"}`}
 				placeholder="Start typing here...(or paste your text)" value={inputVal} onChange={onChange}>
 			</textarea>
@@ -24,7 +26,7 @@ function ErrorMessage({ charLimExc, maxChars }) {
 		<>
 			{
 				charLimExc &&
-				<p className="text-4 userInpus__errorMessage">
+				<p className="text-4 userInputs__errorMessage">
 					<i className="fa-solid fa-circle-info icon"></i>
 					Limit reached! Your text exceeds {maxChars} characters
 				</p>
@@ -33,11 +35,11 @@ function ErrorMessage({ charLimExc, maxChars }) {
 	);
 }
 
-export function CheckboxFeature({children, value, onChange}) {
+export function CheckboxFeature({id, children, value, onChange}) {
 	return (
 		<label className="userInputs__checkbox-label">
-			<input type="checkbox" value={value} onChange={onChange}/>
-			<span className="userInput__custon-checkbox"></span>
+			<input id={id} type="checkbox" checked={value} onChange={onChange}/>
+			<span className="userInput__custom-checkbox"></span>
 			<span className="text-4">{children}</span>
 		</label>
 	);

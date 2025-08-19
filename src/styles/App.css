@@ -57,6 +57,17 @@
     gap: var(--spacing-200);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+}
+
 .userInputs__text {
     height: 20rem;
     border-radius: var(--radius-12);
@@ -89,7 +100,7 @@
     margin-right: var(--spacing-100);
 }
 
-.userInpus__errorMessage {
+.userInputs__errorMessage {
     color: var(--orange-800);
 }
 
@@ -129,7 +140,7 @@ input[type="checkbox"] {
     visibility: hidden;
 }
 
-.userInput__custon-checkbox {
+.userInput__custom-checkbox {
     margin-right: 1rem;
     width: 16px;
     height: 16px;
@@ -137,7 +148,7 @@ input[type="checkbox"] {
     border: 1px solid var(--secondary-color);
 }
 
-input[type="checkbox"]:checked + .userInput__custon-checkbox {
+input[type="checkbox"]:checked + .userInput__custom-checkbox {
     background: var(--purple-500) url("../assets/icon-check.svg") no-repeat center;
     border: none;
 }

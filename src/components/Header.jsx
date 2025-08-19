@@ -16,7 +16,7 @@ export default function Header() {
 	});
 
 	function toggleTheme() {
-		setCurrentTheme(currentTheme => currentTheme === 'dark' ? 'light' : 'dark');
+		setCurrentTheme(currTheme => currTheme === 'dark' ? 'light' : 'dark');
 	}
 
 	useEffect(() => {
@@ -26,7 +26,7 @@ export default function Header() {
 
 	return <header className="app-header">
 		<img className="app-header__logo" src={logoSrc[currentTheme]} alt="Application logo - Character counter"/>
-		<button className="app-header__theme-button" onClick={toggleTheme} aria-label={`Change to theme ${currentTheme === 'dark' ? 'light' : 'dark'}`}>
+		<button className="app-header__theme-button" onClick={toggleTheme} aria-label={`Change to theme ${currentTheme === 'dark' ? 'light' : 'dark'}`} type="button">
 			<img className="app-header__theme-icon" src={iconSrc[currentTheme]} alt={`Icon with a ${currentTheme === 'dark' ? 'sun' : 'moon'} representing target theme to change`}/>
 		</button>
 	</header>
