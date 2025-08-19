@@ -39,7 +39,7 @@ The main purpose of this projects is to practice the fundamentals of JavaScript 
 
 
 ## **Mobile preview:**
-![Screenshot](./preview/mobile-preview.png)
+![demo-mobile](https://github.com/user-attachments/assets/3eaf1414-fe48-436b-8c30-e5b7200a70c7)
 
 ## Live site url:
 https://cfcharcounter.netlify.app/
