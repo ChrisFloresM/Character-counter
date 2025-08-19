@@ -35,7 +35,8 @@ The main purpose of this projects is to practice the fundamentals of JavaScript 
 
 
 ## **Desktop preview:**
-![Screenshot](./preview/desktop-preview.png)
+![demo-desktop](https://github.com/user-attachments/assets/8f569f83-d891-4de1-ae5c-8a6feba3f0f0)
+
 
 ## **Mobile preview:**
 ![Screenshot](./preview/mobile-preview.png)
