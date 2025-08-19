@@ -51,7 +51,9 @@ export function FeatureInputs({ children }) {
 			<div className="checkboxes">
 				{ children }
 			</div>
-			<p className="text-4">Approx.reading time: {"<"}{2} minute</p>
+			<aside>
+				<p className="text-4">Approx.reading time: {"<"}{2} minute</p>
+			</aside>
 		</div>
 	)
 }
