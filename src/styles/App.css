@@ -13,6 +13,7 @@
 }
 
 .app-header__theme-button {
+    -webkit-tap-highlight-color: transparent;
     width: 32px;
     height: 32px;
     border: none;
@@ -64,7 +65,7 @@
     color: inherit;
     background-color: var(--box-background);
     box-shadow: inset 0 0 0 2px var(--box-inset-shadow);
-    overflow: scroll;
+    overflow: auto;
     resize: none;
 
     @media (hover: hover) {
